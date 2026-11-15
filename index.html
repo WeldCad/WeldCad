@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeldCAD: Metal Fabrication Design</title>
+<meta name="description" content="WeldCAD is a design app for welders and metal fabricators: 3D steel design, cut lists, cost, shop drawings and plasma cut files on iPhone, iPad and Mac.">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<style>
+  :root{--bg:#f6f4f1;--card:#ffffff;--ink:#16191e;--dim:#5b6470;--line:#e3e0db;--accent:#c25e00;--accent-ink:#ffffff;--hero:linear-gradient(180deg,#2a1d12 0,#1a1d22 70%);--hero-ink:#f2f4f6;--hero-dim:#b9c1ca}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121417;--card:#1b1f24;--ink:#e8ebef;--dim:#9aa4af;--line:#2c333b;--accent:#ff9a3c;--accent-ink:#1b1206}}
+  :root[data-theme="dark"]{--bg:#121417;--card:#1b1f24;--ink:#e8ebef;--dim:#9aa4af;--line:#2c333b;--accent:#ff9a3c;--accent-ink:#1b1206}
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;margin:0}
+  a{color:var(--accent)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 16px}
+  header.hero{background:var(--hero);color:var(--hero-ink);padding:48px 0 40px;text-align:center}
+  .hero img.icon{width:96px;height:96px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+  .hero h1{font-size:clamp(30px,6vw,44px);margin:16px 0 4px;letter-spacing:-.5px}
+  .hero h1 span{color:#ff8a1f}
+  .hero p{color:var(--hero-dim);font-size:18px;max-width:560px;margin:0 auto 24px}
+  .btn{display:inline-block;background:#ff8a1f;color:#1b1206;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:12px}
+  .btn.soon{background:#2a3038;color:#e6eaee;border:1px solid #3a414b}
+  .shots{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:-8px auto 0;padding:32px 16px 8px;max-width:960px}
+  .shots img{width:100%;height:auto;border-radius:16px;display:block;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+  section{padding:32px 0 8px}
+  h2{font-size:24px;margin:0 0 12px;letter-spacing:-.3px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .card b{display:block;font-size:16px;margin-bottom:2px}
+  .card small{color:var(--dim);font-size:14px;line-height:1.5;display:block}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:0 0 10px}
+  summary{cursor:pointer;font-weight:600}
+  details p{margin:8px 0 2px;color:var(--dim)}
+  .contact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center}
+  .contact .btn{margin-top:6px}
+  footer{color:var(--dim);font-size:14px;text-align:center;padding:40px 16px 48px}
+  footer a{color:var(--dim)}
+  @media (max-width:760px){.shots{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <img class="icon" src="img/icon.png" alt="WeldCAD app icon" width="96" height="96">
+    <h1>Weld<span>CAD</span></h1>
+    <p>Design it in 3D with real steel, get the cut list and the price, then cut the parts on your plasma table. For iPhone, iPad and Mac.</p>
+    <!-- When the app is live, replace href="#" with your App Store link and the text with "Download on the App Store" -->
+    <a class="btn soon" href="#" id="storeBtn">Coming soon to the App Store</a>
+  </div>
+</header>
+
+<div class="shots">
+  <img src="img/01-design-in-3d.jpg" alt="Designing a steel frame in 3D" loading="lazy" width="560" height="1217">
+  <img src="img/04-cut-list.jpg" alt="Cut list nested into stock lengths" loading="lazy" width="560" height="1217">
+  <img src="img/05-plasma-designer.jpg" alt="Plasma designer with layers and bridges" loading="lazy" width="560" height="1217">
+  <img src="img/07-plasma-sim.jpg" alt="Plasma table simulator cutting a part" loading="lazy" width="560" height="1217">
+</div>
+
+<main class="wrap">
+  <section>
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card"><b>3D steel design</b><small>Tube, pipe, angle, channel, flat bar, beams and plate in standard sizes. Pieces snap together.</small></div>
+      <div class="card"><b>80+ templates</b><small>Welding tables, carts, racks, gates, trailers and truck boxes. Change the size and every piece updates.</small></div>
+      <div class="card"><b>Cut list and cost</b><small>Nests pieces into stock lengths and prices the job: steel, hardware, wire, gas, labor and markup.</small></div>
+      <div class="card"><b>Sheet metal</b><small>Brackets, channels and trays with the flat pattern worked out for you.</small></div>
+      <div class="card"><b>Plasma designer</b><small>Shapes, text, layers and bridges, picture tracing, auto-nest, and G-code, DXF or SVG cut files.</small></div>
+      <div class="card"><b>Plasma table simulator</b><small>Watch the part cut before you burn metal. Tip size, amperage, cut time and consumable wear.</small></div>
+    </div>
+  </section>
+
+  <section id="help">
+    <h2>Help</h2>
+    <details><summary>What's free, and what is WeldCAD Pro?</summary>
+      <p>Designing is free: 3D design, templates, sheet metal, cut list, cost, the 2D drawing view, the plasma designer and the table simulator. WeldCAD Pro adds unlimited G-code, DXF and SVG cut files (your first 3 are free), picture tracing, auto-nesting, STL and CSV export, DXF drawings and printing.</p></details>
+    <details><summary>I bought Pro but it isn't turned on</summary>
+      <p>Open WeldCAD → Settings → See WeldCAD Pro → <b>Restore purchases</b>. Make sure you're signed in with the same Apple Account you bought it with. Pro also works on your other iPhone, iPad and Mac with that account, and with Family Sharing.</p></details>
+    <details><summary>How do I cancel my subscription?</summary>
+      <p>On iPhone or iPad: Settings → your name → Subscriptions → WeldCAD Pro. On Mac: App Store → your name → Account Settings → Subscriptions. Pro stays on until the end of the period you paid for. Cancel at least 24 hours before it renews to avoid the next charge.</p></details>
+    <details><summary>How do I get a refund?</summary>
+      <p>Purchases are handled by Apple. Request a refund at <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</p></details>
+    <details><summary>Which plasma tables does the G-code work with?</summary>
+      <p>WeldCAD has post-processors for Langmuir FireControl, Mach3/Mach4, Torchmate, UCCNC, LinuxCNC/QtPlasmaC, MASSO, GRBL, ArcDroid and generic G-code. You can also export DXF or SVG for your own CAM software. Try a test cut on scrap first.</p></details>
+    <details><summary>Where are my designs saved? Do I need an account?</summary>
+      <p>No account. Everything is saved on your device and the app works offline. Use Save or Share to back up a design to Files, iCloud Drive, AirDrop or email.</p></details>
+    <details><summary>The app has a tour, can I see it again?</summary>
+      <p>Tap <b>?</b> in WeldCAD to open the quick guide or replay the tour.</p></details>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Found a bug, need help, or have an idea for WeldCAD? Send an email and include your device and what you were doing.</p>
+      <a class="btn" id="mailBtn" href="#">Email support</a>
+      <p><small id="mailText"></small></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="privacy.html">Privacy policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Terms of use</a><br>
+  © 2026 WeldCAD
+</footer>
+
+<script>
+  // ▼ Put your support email here (one place). It shows on the page and opens the email button.
+  const SUPPORT_EMAIL = 'frankie.chavez@weldingpro.net';
+  document.getElementById('mailBtn').href = 'mailto:' + SUPPORT_EMAIL + '?subject=' + encodeURIComponent('WeldCAD support');
+  document.getElementById('mailText').textContent = SUPPORT_EMAIL;
+</script>
+</body>
+</html>
